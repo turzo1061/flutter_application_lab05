@@ -12,24 +12,45 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Basic-UI -Flutter",
       home: Scaffold(
-        appBar: AppBar( // Corrected 'appbar' to 'appBar'
+        appBar: AppBar(
           title: const Text("Basic Flutter UI - 02"),
-        ), // AppBar
-        body: Row(
+        ),
+        body: Column(
           children: [
-            Text(
-              "Hi,",
-              style: TextStyle(
-                color: Colors.black54,
-                fontSize: 30, // Added comma between properties
-              ), // TextStyle
+            Row(
+              children: [
+                Text(
+                  "Hi,",
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 30,
+                  ),
+                ),
+                Text(
+                  " flutter",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 20,
+                  ),
+                ),
+              ],
             ),
-            Text(
-              " flutter",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 20, // Fixed typo 'bluefontsize' to 'blue, fontSize'
-              ), // TextStyle
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star, color: Colors.yellow),
+                Icon(Icons.star_border, color: Colors.yellow),
+                Text(
+                  " 5 out of 4",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
