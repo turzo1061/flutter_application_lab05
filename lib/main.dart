@@ -16,8 +16,10 @@ class MyApp extends StatelessWidget {
           title: const Text("Basic Flutter UI - 02"),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Hi,",
@@ -37,16 +39,39 @@ class MyApp extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.star, color: Colors.yellow),
-                Icon(Icons.star, color: Colors.yellow),
-                Icon(Icons.star, color: Colors.yellow),
-                Icon(Icons.star, color: Colors.yellow),
-                Icon(Icons.star_border, color: Colors.yellow),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 40,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 40,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 40,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 40,
+                ),
+                Icon(
+                  Icons.star_border,
+                  color: Colors.amber,
+                  size: 40,
+                ),
+                SizedBox(width: 10),
                 Text(
-                  " 5 out of 4",
+                  "5 out of 4",
                   style: TextStyle(
                     fontSize: 18,
+                    fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                 ),
