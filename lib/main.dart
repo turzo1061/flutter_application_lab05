@@ -1,72 +1,73 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const LabClass05());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class LabClass05 extends StatelessWidget {
+  const LabClass05({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Basic-UI -Flutter",
+      title: "Basic Flutter UI - 02",
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Basic Flutter UI - 02"),
+          title: Text("Basic Flutter UI - 02"),
+          backgroundColor: Colors.blue,
         ),
-        body: SingleChildScrollView(
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
+        body: Center(
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+            elevation: 5,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Hi,",
-                      style: TextStyle(
-                        color: Colors.black54,
-                        fontSize: 30,
-                      ),
-                    ),
-                    Text(
-                      " flutter",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+                // Image in Card
+                ClipRRect(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                  child: Image.asset(
+                    'assets/shoes.jpg',
+                    width: 300,  // Adjust the width of the image
+                    height: 200, // Adjust the height of the image
+                    fit: BoxFit.cover, // Make sure the image fits nicely
+                  ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.ac_unit,
-                      color: Colors.blue,
-                      size: 40,
-                    ),
-                    Icon(
-                      Icons.safety_check,
-                      color: Colors.green,
-                      size: 40,
-                    ),
-                    Icon(
-                      Icons.mail,
-                      color: Colors.orange,
-                      size: 40,
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      // Price text
+                      Text(
+                        'Price: \$100',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green,
+                        ),
+                      ),
+                      // Discount text
+                      SizedBox(height: 5),
+                      Text(
+                        'Discount: 20% off',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.red,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      // Button or other actions (e.g., Add to Cart)
+                      ElevatedButton(
+                        onPressed: () {
+                          // Add action here
+                        },
+                        child: Text('Add to Cart'),
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 20),
-                buildIconRow(),
               ],
             ),
           ),
@@ -74,19 +75,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
-  Widget buildIconRow() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: List.generate(
-        100,
-        (index) => Icon(
-          Iconsax.activity,
-          size: index.toDouble(), // Use index as size
-          color: Color.fromRGBO(index % 256, (index * 2) % 256, (index * 3) % 256, 1), // RGB color based on index
-        ),
-      ),
-    );
-  }
 }
-
