@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
         body: Container(
           height: double.infinity,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
@@ -41,34 +41,23 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Icon(
-                    Icons.star,
-                    color: Colors.amber,
+                    Icons.ac_unit,
+                    color: Colors.blue,
                     size: 40,
                   ),
                   Icon(
-                    Icons.star,
-                    color: Colors.amber,
+                    Icons.safety_check,
+                    color: Colors.green,
                     size: 40,
                   ),
                   Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                    size: 40,
-                  ),
-                  Icon(
-                    Icons.star,
-                    color: Colors.amber,
-                    size: 40,
-                  ),
-                  Icon(
-                    Icons.star_border,
-                    color: Colors.amber,
+                    Icons.mail,
+                    color: Colors.orange,
                     size: 40,
                   ),
                 ],
