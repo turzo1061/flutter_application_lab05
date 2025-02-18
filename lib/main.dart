@@ -66,15 +66,6 @@ class MyApp extends StatelessWidget {
                   color: Colors.amber,
                   size: 40,
                 ),
-                SizedBox(width: 10),
-                Text(
-                  "5 out of 4",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
               ],
             ),
           ],
