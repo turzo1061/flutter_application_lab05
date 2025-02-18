@@ -15,14 +15,24 @@ class MyApp extends StatelessWidget {
         appBar: AppBar( // Corrected 'appbar' to 'appBar'
           title: const Text("Basic Flutter UI - 02"),
         ), // AppBar
-        body: const Center( // Added Center widget for proper alignment
-          child: Text(
-            "Basic Flutter UI - Part 02",
-            style: TextStyle(
-              fontSize: 30, // Corrected 'fontsize' to 'fontSize'
-            ), // TextStyle
-          ),
-        ), // Text
+        body: Row(
+          children: [
+            Text(
+              "Hi,",
+              style: TextStyle(
+                color: Colors.black54,
+                fontSize: 30, // Added comma between properties
+              ), // TextStyle
+            ),
+            Text(
+              " flutter",
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 20, // Fixed typo 'bluefontsize' to 'blue, fontSize'
+              ), // TextStyle
+            ),
+          ],
+        ),
       ),
     );
   }
